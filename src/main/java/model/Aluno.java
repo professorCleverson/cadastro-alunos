@@ -1,13 +1,11 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 @Entity // cria uma entidade chamada Aluno no BD.
 public class Aluno {
 	
-	@jakarta.persistence.Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	private String nome;
