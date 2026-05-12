@@ -1,4 +1,4 @@
-package controller;
+package br.com.escola.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import model.Aluno;
-import repository.AlunoRepository;
+import br.com.escola.model.Aluno;
+import br.com.escola.repository.AlunoRepository;
 
 @Controller // Torna esta classe como uma classe Controller
 public class AlunoController {
