@@ -6,29 +6,33 @@
 </head>
 <body>
 
-<h1>Lista de Alunos</h1>
+	<h1>Lista de Alunos</h1>
 
-<a href="/novo">Novo Aluno</a>
+	<a href="/novo">Novo Aluno</a>
 
-<br><br>
+	<br>
 
-<table border="1">
+	<table border="1">
 
-    <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>E-mail</th>
-        <th>Curso</th>
-    </tr>
+		<tr>
+			<th>ID</th>
+			<th>Nome</th>
+			<th>E-mail</th>
+			<th>Curso</th>
+			<th>Telefone</th>
+			<th>Data Nascimento</th>
+			<th>Ações</th>
+		</tr>
 
-    <tr th:each="aluno : ${alunos}">
-        <td th:text="${aluno.id}"></td>
-        <td th:text="${aluno.nome}"></td>
-        <td th:text="${aluno.email}"></td>
-        <td th:text="${aluno.curso}"></td>
-    </tr>
-
-</table>
-
+		<tr th:each="aluno : ${alunos}">
+			<td th:text="${aluno.id}"></td>
+			<td th:text="${aluno.nome}"></td>
+			<td th:text="${aluno.email}"></td>
+			<td th:text="${aluno.curso}"></td>
+			<td th:text="${aluno.telefone}"></td>
+			<td th:text="${aluno.dataNascimento}"></td>
+			<td><a th:href="@{/editar/{id}(id=${aluno.id})}"> Editar </a> <a
+				th:href="@{/excluir/{id}(id=${aluno.id})}"> Excluir </a></td>
+	</table>
 </body>
 </html>
